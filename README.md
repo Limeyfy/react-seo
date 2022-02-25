@@ -76,6 +76,8 @@ const App = () => {
 export default App;
 ```
 
+### Params
+
 - title?: <code>string</code>;
 - subTitle?: <code>string</code>;
 - title?: <code>string</code>;
