@@ -1,6 +1,6 @@
 {
-  "name": "react-better-seo",
-  "version": "1.0.0",
+  "name": "@limeyfy/react-seo",
+  "version": "1.1.0",
   "description": "A library to help with easily maintain good SEO in react. Made by \"https://github.com/notlimey\"",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NotLimey/react-better-seo.git"
+    "url": "git+https://github.com/Limeyfy/react-seo.git"
   },
   "keywords": [
     "react",
@@ -21,17 +21,17 @@
   "author": "Limey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NotLimey/react-better-seo/issues"
+    "url": "https://github.com/Limeyfy/react-seo/issues"
   },
   "directories": {
     "src": "src"
   },
   "browserslist": [
     ">0.2%",
-   "not dead",
-   "not op_mini all"
+    "not dead",
+    "not op_mini all"
   ],
-  "homepage": "https://github.com/NotLimey/react-better-seo#readme",
+  "homepage": "https://github.com/Limeyfy/react-seo#readme",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
     "@types/react-helmet": "^6.1.5",

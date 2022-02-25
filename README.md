@@ -1,18 +1,21 @@
 # React Better SEO
+Maintaining good seo in react is not easy in itself. You can always use react-helmet to help you but understanding all the meta tags and so on can be hard. Therefore I made a npm package to help with easily maintaining good seo.
+
+The package is based on https://www.npmjs.com/package/react-helmet.
 
 ## Getting started
 
 ```terminal
-npm i --save react-better-seo
+npm i --save @limeyfy/react-seo
 
-yarn add react-better-seo
+yarn add @limeyfy/react-seo
 ```
 
 ### Example
 
 ```tsx
 import './App.css';
-import { DefaultHelmet } from 'react-better-seo'
+import { DefaultHelmet } from '@limeyfy/react-seo'
 
 const App = () => {
   return (
@@ -30,7 +33,7 @@ export default App;
 ```tsx
 import './App.css';
 import React, { useEffect } from 'react'
-import { DefaultHelmet, CheckSeo } from 'react-better-seo'
+import { DefaultHelmet, CheckSeo } from '@limeyfy/react-seo'
 
 const App = () => {
 
@@ -58,7 +61,7 @@ export default App;
 
 ```tsx
 import './App.css';
-import { DefaultHelmet } from 'react-better-seo'
+import { DefaultHelmet } from '@limeyfy/react-seo'
 
 const App = () => {
   return (
