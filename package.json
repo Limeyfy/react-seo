@@ -1,0 +1,58 @@
+{
+  "name": "react-better-seo",
+  "version": "0.1.0",
+  "description": "Notlimey's ui library",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotLimey/nl-ui.git"
+  },
+  "keywords": [
+    "notlimey",
+    "react",
+    "typescript",
+    "limey",
+    "components",
+    "library"
+  ],
+  "author": "Notlimey",
+  "license": "ISC",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
+  "types": "build/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/NotLimey/nl-ui/issues"
+  },
+  "homepage": "https://github.com/NotLimey/nl-ui#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/react": "^17.0.37",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.4.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
+    "rollup": "^2.60.2",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-sass": "^1.2.10",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@types/react-helmet": "^6.1.5",
+    "react-helmet": "^6.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
