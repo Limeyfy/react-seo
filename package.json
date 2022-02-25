@@ -1,6 +1,6 @@
 {
   "name": "react-better-seo",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A library to help with easily maintain good SEO in react. Made by \"https://github.com/notlimey\"",
   "main": "src/index.ts",
   "files": [

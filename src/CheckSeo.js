@@ -115,6 +115,9 @@ export const CheckSeo = () => {
         Works.push("Images");
     if (CheckForNoIndexTag())
         Works.push("NoIndexTag");
-    const word = words[(Works.length / 2) - 1];
+    let leng = parseInt(((Works.length - 1) / 2).toFixed());
+    if (Works.length !== 6 && leng === 2)
+        leng--;
+    const word = words[leng];
     consoleInfo(`Report finished. ${word && word[Math.floor(Math.random() * word.length)]}`);
 };
