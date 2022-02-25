@@ -72,7 +72,8 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
             {props.description &&
                 <Helmet>
                     <meta name="description" content={props.description}/>
-                    <meta name="og:description" content={props.description} />
+                    <meta property="og:description" content={props.description} />
+                    <meta property="twitter:description" content={props.description} />
                 </Helmet>
             }
             <Helmet>
