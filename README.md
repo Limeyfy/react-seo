@@ -7,7 +7,7 @@ The package is based on https://www.npmjs.com/package/react-helmet.
 
 ```terminal
 npm i --save @limeyfy/react-seo
-
+// or
 yarn add @limeyfy/react-seo
 ```
 
