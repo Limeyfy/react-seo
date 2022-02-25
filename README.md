@@ -98,4 +98,4 @@ export default App;
 - identifierURL?: <code>string</code>;
 - image?: <code>string</code>;
 - favIcon?: <code>string</code>;
-- children?: React.ReactNode;
+- children?: <code>React.ReactNode</code>;
