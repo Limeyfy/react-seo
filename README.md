@@ -13,7 +13,7 @@ yarn add @limeyfy/react-seo
 
 ### Example
 
-```tsx
+```jsx
 import './App.css';
 import { DefaultHelmet } from '@limeyfy/react-seo'
 
