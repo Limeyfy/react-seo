@@ -1,8 +1,6 @@
-# NL-UI / Notlimey UI
+# React Better SEO
 
-Is a library for ui and functional components for react and or typescript
-
-# Getting started
+## Getting started
 
 ```terminal
 npm i --save react-better-seo
@@ -14,12 +12,12 @@ yarn add react-better-seo
 
 ```javascript
 import './App.css';
-import { DefaultHelmet } from 'nl-ui'
+import { DefaultHelmet } from 'react-better-seo'
 
 function App() {
   return (
     <div className="App">
-      <DefaultHelmet Title="Hey" SubTitle="cool" />
+      <DefaultHelmet title="Hey" subTitle="cool" />
     </div>
   );
 }
