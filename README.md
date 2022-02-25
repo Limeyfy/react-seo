@@ -4,7 +4,11 @@ Is a library for ui and functional components for react and or typescript
 
 # Getting started
 
-`npm i --save nl-ui`
+```terminal
+npm i --save react-better-seo
+
+yarn add react-better-seo
+```
 
 ## Example
 
