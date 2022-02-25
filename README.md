@@ -8,7 +8,7 @@ npm i --save react-better-seo
 yarn add react-better-seo
 ```
 
-## Example
+### Example
 
 ```tsx
 import './App.css';
@@ -25,7 +25,36 @@ const App = () => {
 export default App;
 ```
 
-Another example
+### Test SEO
+
+```tsx
+import './App.css';
+import React, { useEffect } from 'react'
+import { DefaultHelmet, CheckSeo } from 'react-better-seo'
+
+const App = () => {
+
+  // Call checkSeo in useEffect
+  useEffect(() => {
+    CheckSeo();
+  }, [])
+
+  return (
+    <div className="App">
+      <DefaultHelmet
+        title="Limeyfy"
+        subTitle="App"
+      >
+        <meta name='og:country-name' content='NORWAY'>
+      </DefaultHelmet>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### Another example
 
 ```tsx
 import './App.css';
