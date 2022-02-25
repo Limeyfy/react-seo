@@ -4,8 +4,8 @@ const words = [
     ["You're rocking this!", "Hats off to you", "You're so good you don't need to use google ads!"]
 ]
 
-const consoleWarn = (text : any) => console.warn(`nl-ui: ${text}`)
-const consoleInfo = (text : any) => console.info(`nl-ui: ${text}`)
+const consoleWarn = (text : any) => console.warn(`${text}`)
+const consoleInfo = (text : any) => console.info(`${text}`)
 
 const CheckTitles = () => {
     const titles = window.document.getElementsByTagName("h1");
