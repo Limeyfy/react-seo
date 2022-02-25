@@ -30,7 +30,7 @@ export default App;
 
 ### Test SEO
 
-```tsx
+```jsx
 import './App.css';
 import React, { useEffect } from 'react'
 import { DefaultHelmet, CheckSeo } from '@limeyfy/react-seo'
@@ -59,7 +59,7 @@ export default App;
 
 ### Another example
 
-```tsx
+```jsx
 import './App.css';
 import { DefaultHelmet } from '@limeyfy/react-seo'
 
