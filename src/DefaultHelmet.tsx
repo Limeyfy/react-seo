@@ -92,31 +92,31 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                 {props.author && <meta name="author" content={props.author} />}
                 {props.replyTo && <meta name="replyTo" content={props.replyTo} />}
                 {props.owner && <meta name="owner" content={props.owner} />}
-                {props.url ? 
-                    <Helmet>
-                        <meta name="url" content={props.url} />
-                        <meta property="og:url" content={props.url} />
-                        <meta property="twitter:url" content={props.url} />
-                    </Helmet> 
-                : 
-                    <Helmet>
-                        <meta name="url" content={window.location.origin + window.location.pathname} />
-                        <meta property="og:url" content={window.location.origin + window.location.pathname} />
-                        <meta property="twitter:url" content={window.location.origin + window.location.pathname} />
-                    </Helmet>
-                }
                 {props.identifierURL && <meta name="identifierURL" content={props.identifierURL} />}
-                {props.image && 
-                    <Helmet>
-                        <meta property="og:image" content={props.image} />
-                        <meta property="twitter:image" content={props.image} />
-                    </Helmet>
-                }
                 {props.favIcon && <link rel="icon" type="image/x-icon" href={props.favIcon} />}
                 <meta property="og:type" content={props.ogType ?? "website"} />
                 <meta property="twitter:card" content={props.twitterCard ?? "summary_large_image"} />
                 {props.children}
             </Helmet>
+            {props.url ? 
+                <Helmet>
+                    <meta name="url" content={props.url} />
+                    <meta property="og:url" content={props.url} />
+                    <meta property="twitter:url" content={props.url} />
+                </Helmet> 
+            : 
+                <Helmet>
+                    <meta name="url" content={window.location.origin + window.location.pathname} />
+                    <meta property="og:url" content={window.location.origin + window.location.pathname} />
+                    <meta property="twitter:url" content={window.location.origin + window.location.pathname} />
+                </Helmet>
+            }
+            {props.image && 
+                <Helmet>
+                    <meta property="og:image" content={props.image} />
+                    <meta property="twitter:image" content={props.image} />
+                </Helmet>
+            }
         </React.Fragment>
     )
 }
