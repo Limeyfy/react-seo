@@ -25,6 +25,8 @@ interface DefaultHelmetProps {
     image?: string;
     favIcon?: string;
     children?: React.ReactNode;
+    ogType?: string;
+    twitterCard?: string;
 }
 
 export const DefaultHelmet = (props : DefaultHelmetProps) => {
@@ -65,6 +67,7 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                     <title>
                         {getTitle()}
                     </title>
+                    <meta name="title" content={getTitle()} />
                     <meta property="og:title" content={getTitle()} />
                     <meta property="twitter:title" content={getTitle()} />
                 </Helmet>
@@ -110,6 +113,8 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                     </React.Fragment>
                 }
                 {props.favIcon && <link rel="icon" type="image/x-icon" href={props.favIcon} />}
+                <meta property="og:type" content={props.ogType ?? "website"} />
+                <meta property="twitter:card" content={props.twitterCard ?? "summary_large_image"} />
                 {props.children}
             </Helmet>
         </React.Fragment>
