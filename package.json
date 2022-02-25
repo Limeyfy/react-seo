@@ -1,7 +1,7 @@
 {
   "name": "react-better-seo",
-  "version": "0.1.0",
-  "description": "Notlimey's ui library",
+  "version": "0.2.0",
+  "description": "React better seo. Use this library to easily get better seo on your page. Library for react made by https://github.com/NotLimey.",
   "scripts": {
     "build": "rollup -c"
   },
