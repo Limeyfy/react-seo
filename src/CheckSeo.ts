@@ -1,15 +1,11 @@
-
-// interface CheckSEOProps {
-    
-// }
 const words = [
     ["I think you can do a little better", "Its not exactly good..", "Your gonna have to look for this page"],
     ["This is pretty okay", "U did a decent job", "You're almost there!"],
     ["You're rocking this!", "Hats off to you", "You're so good you don't need to use google ads!"]
 ]
 
-const consoleWarn = text => console.warn(`nl-ui: ${text}`)
-const consoleInfo = text => console.info(`nl-ui: ${text}`)
+const consoleWarn = (text : any) => console.warn(`nl-ui: ${text}`)
+const consoleInfo = (text : any) => console.info(`nl-ui: ${text}`)
 
 const CheckTitles = () => {
     const titles = window.document.getElementsByTagName("h1");
@@ -52,7 +48,12 @@ const CheckDescription = () => {
         consoleWarn("Page should have a <meta> tag with description. Use description value in DefaultHelmet")
         return false;
     }
-    const descriptionText = description.attributes["content"].nodeValue;
+    const newLocal : any = "content";
+    const descriptionText = description.attributes[newLocal].nodeValue;
+    if(!descriptionText) {
+        consoleWarn(`Description text is null`)
+        return false;
+    }
     if(descriptionText.length < 71 || descriptionText.length > 320) {
         consoleWarn(`Your page has a meta description of optimal length (between 70 and 320 characters). Current description length: ${descriptionText.length}`)
         return false;
@@ -68,7 +69,12 @@ const CheckKeywords = () => {
         consoleWarn("Page should have a <meta> tag with keywords. Use keywords value in DefaultHelmet")
         return false;
     }
-    const keywordsText = keywords.attributes["content"].nodeValue;
+    const newLocal : any = "content";
+    const keywordsText = keywords.attributes[newLocal].nodeValue;
+    if(!keywordsText) {
+        consoleWarn(`Keywords is null`)
+        return false;
+    }
     const keywordsArray = keywordsText.split(",");
     if(keywordsArray.length < 10) {
         consoleWarn("You should have at least 10 keywords on your page")
@@ -81,9 +87,10 @@ const CheckKeywords = () => {
 
 const CheckImages = () => {
     const images = window.document.querySelectorAll('img');
-    let imagesWithNoAlt = [];
+    let imagesWithNoAlt : any = [];
     images.forEach(img => {
-        const alt = img.attributes["alt"];
+        const newLocal : any = "alt";
+        const alt = img.attributes[newLocal];
         if(!alt) imagesWithNoAlt.push(img);
     })
 

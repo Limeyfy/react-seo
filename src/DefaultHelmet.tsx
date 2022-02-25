@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-var defaultSettings : any = {}
+let defaultSettings : any = {}
 
 interface DefaultHelmetProps {
     title?: string;
@@ -35,9 +35,9 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
 
     const keys = Object.keys(props);
     for(var i = 0; i < keys.length; i++) {
-        if(keys[i] === "title") _defaultSettings.title = props[keys[i]];
-        if(keys[i] === "subTitle") _defaultSettings.subTitle = props[keys[i]];
-        if(keys[i] === "titleDivider") _defaultSettings.titleDivider = props[keys[i]];
+        if(keys[i] === "title") _defaultSettings.title = props.title;
+        if(keys[i] === "subTitle") _defaultSettings.subTitle = props.subTitle;
+        if(keys[i] === "titleDivider") _defaultSettings.titleDivider = props.titleDivider;
     }
 
     const getTitle = () => {
@@ -93,24 +93,24 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                 {props.replyTo && <meta name="replyTo" content={props.replyTo} />}
                 {props.owner && <meta name="owner" content={props.owner} />}
                 {props.url ? 
-                    <React.Fragment>
+                    <Helmet>
                         <meta name="url" content={props.url} />
                         <meta property="og:url" content={props.url} />
                         <meta property="twitter:url" content={props.url} />
-                    </React.Fragment> 
+                    </Helmet> 
                 : 
-                    <React.Fragment>
+                    <Helmet>
                         <meta name="url" content={window.location.origin + window.location.pathname} />
                         <meta property="og:url" content={window.location.origin + window.location.pathname} />
                         <meta property="twitter:url" content={window.location.origin + window.location.pathname} />
-                    </React.Fragment>
+                    </Helmet>
                 }
                 {props.identifierURL && <meta name="identifierURL" content={props.identifierURL} />}
                 {props.image && 
-                    <React.Fragment>
+                    <Helmet>
                         <meta property="og:image" content={props.image} />
                         <meta property="twitter:image" content={props.image} />
-                    </React.Fragment>
+                    </Helmet>
                 }
                 {props.favIcon && <link rel="icon" type="image/x-icon" href={props.favIcon} />}
                 <meta property="og:type" content={props.ogType ?? "website"} />

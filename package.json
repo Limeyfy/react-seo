@@ -1,58 +1,51 @@
 {
   "name": "react-better-seo",
-  "version": "0.2.1",
-  "description": "React better seo. Use this library to easily get better seo on your page. Library for react made by https://github.com/NotLimey.",
+  "version": "2.5.0",
+  "description": "A library to help with easily maintain good SEO in react. Made by \"https://github.com/notlimey\"",
+  "main": "src/index.ts",
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NotLimey/nl-ui.git"
+    "url": "git+https://github.com/NotLimey/react-better-seo.git"
   },
   "keywords": [
-    "notlimey",
     "react",
-    "typescript",
-    "limey",
-    "components",
-    "library"
+    "seo"
   ],
-  "author": "Notlimey",
-  "license": "ISC",
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "files": [
-    "build"
-  ],
-  "types": "build/index.d.ts",
+  "author": "Limey",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NotLimey/nl-ui/issues"
+    "url": "https://github.com/NotLimey/react-better-seo/issues"
   },
-  "homepage": "https://github.com/NotLimey/nl-ui#readme",
+  "directories": {
+    "src": "src"
+  },
+  "browserslist": [
+    ">0.2%",
+   "not dead",
+   "not op_mini all"
+  ],
+  "homepage": "https://github.com/NotLimey/react-better-seo#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.3.0",
-    "@types/react": "^17.0.37",
-    "node-sass": "^6.0.1",
-    "postcss": "^8.4.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^6.0.2",
-    "rollup": "^2.60.2",
-    "rollup-plugin-dts": "^4.0.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-sass": "^1.2.10",
-    "rollup-plugin-typescript2": "^0.31.1",
-    "typescript": "^4.5.2"
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/react-helmet": "^6.1.5",
+    "@types/styled-components": "^5.1.11",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
-    "@types/react-helmet": "^6.1.5",
-    "react-helmet": "^6.1.0"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.3.0"
   }
 }
