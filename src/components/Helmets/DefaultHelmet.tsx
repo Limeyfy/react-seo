@@ -65,7 +65,8 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                     <title>
                         {getTitle()}
                     </title>
-                    <meta name="og:title" content={getTitle()} />
+                    <meta property="og:title" content={getTitle()} />
+                    <meta property="twitter:title" content={getTitle()} />
                 </Helmet>
             }
             {props.description &&
