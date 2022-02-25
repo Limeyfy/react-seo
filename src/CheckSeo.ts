@@ -118,5 +118,5 @@ export const CheckSeo = () => {
     if(CheckForNoIndexTag()) Works.push("NoIndexTag");
 
     const word = words[(Works.length / 2) - 1]
-    consoleInfo(`Report finished. ${word[Math.floor(Math.random()*word.length)]}`)
+    consoleInfo(`Report finished. ${word && word[Math.floor(Math.random()*word.length)]}`)
 }

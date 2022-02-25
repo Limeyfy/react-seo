@@ -31,42 +31,36 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
 
     const _defaultSettings = defaultSettings;
 
-    if(props) {
-        const keys = Object.keys(props);
-        for(var i = 0; i < keys.length; i++) {
-            if(props[keys[i]] === "title" || props[keys[i]] === "subTitle" || props[keys[i]] === "titleDivider")
-                defaultSettings[keys[i]] = props[keys[i]]
-        }
+    const keys = Object.keys(props);
+    for(var i = 0; i < keys.length; i++) {
+        if(keys[i] === "title") _defaultSettings.title = props[keys[i]];
+        if(keys[i] === "subTitle") _defaultSettings.subTitle = props[keys[i]];
+        if(keys[i] === "titleDivider") _defaultSettings.titleDivider = props[keys[i]];
     }
 
     const getTitle = () => {
+        const title = props.title ?? _defaultSettings.title;
         let text = "";
 
-        if(props.title) {
-            text = text + props.title;
-        }else {
-            if(_defaultSettings.title) {
-                text = text + _defaultSettings.title;
-            }
-        }
-
-        
+        text = text + title;
         if(props.subTitle || _defaultSettings.subTitle) {
-            let subTtl = props.subTitle ?? _defaultSettings.subTitle;
-
             if(props.titleDivider || _defaultSettings.titleDivider) {
-                text = text + ` ${props.titleDivider ?? _defaultSettings.titleDivider} ` + subTtl
+                text = text + ` ${props.titleDivider ?? _defaultSettings.titleDivider} `
             }else {
-                text = text + " | " + subTtl
+                text = text + ` | `
             }
+            text = text + props.subTitle ?? _defaultSettings.subTitle;
         }
 
-        return text
+        return text;
     }
 
     return (
         <React.Fragment>
-            {(props.title || _defaultSettings.title) &&
+            {(
+                (props.title || _defaultSettings.title) ||
+                (props.subTitle)
+            )&&
                 <Helmet>
                     <title>
                         {getTitle()}
