@@ -89,9 +89,26 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                 {props.author && <meta name="author" content={props.author} />}
                 {props.replyTo && <meta name="replyTo" content={props.replyTo} />}
                 {props.owner && <meta name="owner" content={props.owner} />}
-                {props.url ? <meta name="url" content={props.url} /> : <meta name="url" content={window.location.origin + window.location.pathname} />}
+                {props.url ? 
+                    <React.Fragment>
+                        <meta name="url" content={props.url} />
+                        <meta property="og:url" content={props.url} />
+                        <meta property="twitter:url" content={props.url} />
+                    </React.Fragment> 
+                : 
+                    <React.Fragment>
+                        <meta name="url" content={window.location.origin + window.location.pathname} />
+                        <meta property="og:url" content={window.location.origin + window.location.pathname} />
+                        <meta property="twitter:url" content={window.location.origin + window.location.pathname} />
+                    </React.Fragment>
+                }
                 {props.identifierURL && <meta name="identifierURL" content={props.identifierURL} />}
-                {props.image && <meta property="og:image" content={props.image} />}
+                {props.image && 
+                    <React.Fragment>
+                        <meta property="og:image" content={props.image} />
+                        <meta property="twitter:image" content={props.image} />
+                    </React.Fragment>
+                }
                 {props.favIcon && <link rel="icon" type="image/x-icon" href={props.favIcon} />}
                 {props.children}
             </Helmet>
