@@ -1,6 +1,6 @@
 {
   "name": "@limeyfy/react-seo",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A library to help with easily maintain good SEO in react. Made by \"https://github.com/notlimey\"",
   "main": "src/index.ts",
   "files": [
