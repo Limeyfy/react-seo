@@ -27,6 +27,7 @@ interface DefaultHelmetProps {
     children?: React.ReactNode;
     ogType?: string;
     twitterCard?: string;
+    themeColor?: string;
 }
 
 export const DefaultHelmet = (props : DefaultHelmetProps) => {
@@ -96,6 +97,7 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                 {props.favIcon && <link rel="icon" type="image/x-icon" href={props.favIcon} />}
                 <meta property="og:type" content={props.ogType ?? "website"} />
                 <meta property="twitter:card" content={props.twitterCard ?? "summary_large_image"} />
+                {props.themeColor && <meta name=" theme-color" content={props.themeColor} />}
                 {props.children}
             </Helmet>
             {props.url ? 
