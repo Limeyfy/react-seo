@@ -1,7 +1,22 @@
 const words = [
-    ["I think you can do a little better", "Its not exactly good..", "Your gonna have to look for this page"],
-    ["This is pretty okay", "U did a decent job", "You're almost there!"],
-    ["You're rocking this!", "Hats off to you", "You're so good you don't need to use google ads!"]
+    [
+        "I think you can do a little better",
+        "Its not exactly good..",
+        "Your gonna have to look for this page",
+        "...okay"
+    ],
+    [
+        "This is pretty okay",
+        "U did a decent job",
+        "Its good, but theres room for improvement",
+        "You're almost there!"
+    ],
+    [
+        "You're rocking this!",
+        "Hats off to you",
+        "You're so good you don't need to use google ads!",
+        "Damnnnnn write that off on your "
+    ]
 ];
 const consoleWarn = (text) => console.warn(`${text}`);
 const consoleInfo = (text) => console.info(`${text}`);
