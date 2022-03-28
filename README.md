@@ -33,14 +33,12 @@ export default App;
 ```jsx
 import './App.css';
 import React, { useEffect } from 'react'
-import { DefaultHelmet, CheckSeo } from '@limeyfy/react-seo'
+import { DefaultHelmet, useSeo } from '@limeyfy/react-seo'
 
 const App = () => {
+  const { result } = useSeo();
 
-  // Call checkSeo in useEffect
-  useEffect(() => {
-    CheckSeo();
-  }, [])
+  console.log(result())
 
   return (
     <div className="App">
@@ -87,6 +85,7 @@ export default App;
 - subTitle?: <code>string</code>;
 - titleDivider?: <code>string</code>;
 - keywords?: <code>string</code>;
+- themeColor?: <code>string</code>;
 - description?: <code>string</code>;
 - subject?: <code>string</code>;
 - copyright?: <code>string</code>;
