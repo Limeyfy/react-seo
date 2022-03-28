@@ -1,7 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
-let defaultSettings : any = {}
+let defaultSettings: any = {}
 
 interface DefaultHelmetProps {
     title?: string;
@@ -30,15 +30,15 @@ interface DefaultHelmetProps {
     themeColor?: string;
 }
 
-export const DefaultHelmet = (props : DefaultHelmetProps) => {
+export const DefaultHelmet = (props: DefaultHelmetProps) => {
 
     const _defaultSettings = defaultSettings;
 
     const keys = Object.keys(props);
-    for(var i = 0; i < keys.length; i++) {
-        if(keys[i] === "title") _defaultSettings.title = props.title;
-        if(keys[i] === "subTitle") _defaultSettings.subTitle = props.subTitle;
-        if(keys[i] === "titleDivider") _defaultSettings.titleDivider = props.titleDivider;
+    for (var i = 0; i < keys.length; i++) {
+        if (keys[i] === "title") _defaultSettings.title = props.title;
+        if (keys[i] === "subTitle") _defaultSettings.subTitle = props.subTitle;
+        if (keys[i] === "titleDivider") _defaultSettings.titleDivider = props.titleDivider;
     }
 
     const getTitle = () => {
@@ -46,10 +46,10 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
         let text = "";
 
         text = text + title;
-        if(props.subTitle || _defaultSettings.subTitle) {
-            if(props.titleDivider || _defaultSettings.titleDivider) {
+        if (props.subTitle || _defaultSettings.subTitle) {
+            if (props.titleDivider || _defaultSettings.titleDivider) {
                 text = text + ` ${props.titleDivider ?? _defaultSettings.titleDivider} `
-            }else {
+            } else {
                 text = text + ` | `
             }
             text = text + props.subTitle ?? _defaultSettings.subTitle;
@@ -59,11 +59,11 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
     }
 
     return (
-        <React.Fragment>
+        <HelmetProvider>
             {(
                 (props.title || _defaultSettings.title) ||
                 (props.subTitle)
-            )&&
+            ) &&
                 <Helmet>
                     <title>
                         {getTitle()}
@@ -75,7 +75,7 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
             }
             {props.description &&
                 <Helmet>
-                    <meta name="description" content={props.description}/>
+                    <meta name="description" content={props.description} />
                     <meta property="og:description" content={props.description} />
                     <meta property="twitter:description" content={props.description} />
                 </Helmet>
@@ -102,25 +102,25 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
             {props.themeColor && <Helmet>
                 <meta name="theme-color" content={props.themeColor} />
             </Helmet>}
-            {props.url ? 
+            {props.url ?
                 <Helmet>
                     <meta name="url" content={props.url} />
                     <meta property="og:url" content={props.url} />
                     <meta property="twitter:url" content={props.url} />
-                </Helmet> 
-            : 
+                </Helmet>
+                :
                 <Helmet>
                     <meta name="url" content={window.location.origin + window.location.pathname} />
                     <meta property="og:url" content={window.location.origin + window.location.pathname} />
                     <meta property="twitter:url" content={window.location.origin + window.location.pathname} />
                 </Helmet>
             }
-            {props.image && 
+            {props.image &&
                 <Helmet>
                     <meta property="og:image" content={props.image} />
                     <meta property="twitter:image" content={props.image} />
                 </Helmet>
             }
-        </React.Fragment>
+        </HelmetProvider>
     )
 }
