@@ -136,7 +136,7 @@ const CheckForNoIndexTag: () => IResult = () => {
     }
     return {
         message: `The page has no "noindex" tag.`,
-        checked: false
+        checked: true
     };
 };
 
