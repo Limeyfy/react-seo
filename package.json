@@ -1,6 +1,6 @@
 {
   "name": "@limeyfy/react-seo",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "A library to help with easily maintain good SEO in react. Made by \"https://github.com/notlimey\"",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -10,6 +10,9 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
+  "files": [
+    "/lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Limeyfy/react-seo.git"
