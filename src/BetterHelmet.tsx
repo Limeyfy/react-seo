@@ -28,7 +28,7 @@ export interface BetterHelmetProps {
     themeColor?: string;
 }
 
-const getTitle = (props: BetterHelmetProps) => `${props.title} ${props.titleDivider} ${props.subTitle}`;
+const getTitle = (props: BetterHelmetProps) => `${props.title ?? ""} ${props.titleDivider ?? ""} ${props.subTitle ?? ""}`;
 
 export const BetterHelmet: React.FC<BetterHelmetProps> = (props: BetterHelmetProps) => (
     <HelmetProvider>
