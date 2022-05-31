@@ -11,6 +11,8 @@ npm i --save @limeyfy/react-seo
 yarn add @limeyfy/react-seo
 ```
 
+- [Whats new in v.2.0.0?](#Whats-changed-in-2.0.0?)
+
 ### Example
 
 ```jsx
@@ -103,3 +105,12 @@ export default App;
 - image?: <code>string</code>;
 - favIcon?: <code>string</code>;
 - children?: <code>React.ReactNode</code>;
+
+
+## Whats changed in 2.0.0?
+
+- DefaultHelmet has changed name to BetterHelmet
+- Small performance updates to the BetterHelmet and made the component less complicated
+- Exporting BetterHelmetProps
+
+Note that you can still use the name DefaultHelmet but it will deprecate in the next version
