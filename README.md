@@ -11,18 +11,18 @@ npm i --save @limeyfy/react-seo
 yarn add @limeyfy/react-seo
 ```
 
-- [Whats new in v.2.0.0?](#Whats-changed-in-2.0.0?)
+- [Whats new in v.2.0.0?](#whats-changed-in-200)
 
 ### Example
 
 ```jsx
 import './App.css';
-import { DefaultHelmet } from '@limeyfy/react-seo'
+import { BetterHelmet } from '@limeyfy/react-seo'
 
 const App = () => {
   return (
     <div className="App">
-      <DefaultHelmet title="Hey" subTitle="cool" />
+      <BetterHelmet title="Hey" subTitle="cool" />
     </div>
   );
 }
@@ -35,7 +35,7 @@ export default App;
 ```jsx
 import './App.css';
 import React, { useEffect } from 'react'
-import { DefaultHelmet, useSeo } from '@limeyfy/react-seo'
+import { BetterHelmet, useSeo } from '@limeyfy/react-seo'
 
 const App = () => {
   const { result } = useSeo();
@@ -44,12 +44,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <DefaultHelmet
+      <BetterHelmet
         title="Limeyfy"
         subTitle="App"
       >
         <meta name='og:country-name' content='NORWAY'>
-      </DefaultHelmet>
+      </BetterHelmet>
     </div>
   );
 }
@@ -61,17 +61,17 @@ export default App;
 
 ```jsx
 import './App.css';
-import { DefaultHelmet } from '@limeyfy/react-seo'
+import { BetterHelmet } from '@limeyfy/react-seo'
 
 const App = () => {
   return (
     <div className="App">
-      <DefaultHelmet
+      <BetterHelmet
         title="Limeyfy"
         subTitle="App"
       >
         <meta name='og:country-name' content='NORWAY'>
-      </DefaultHelmet>
+      </BetterHelmet>
     </div>
   );
 }
